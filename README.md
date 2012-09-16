@@ -1,7 +1,7 @@
-jstgp_sample
+achillies-jstgp
 ============
 
-A sample project to work with JavaScript: The Good Parts
+A project used to work with JavaScript: The Good Parts
 
 getting your environment set up
 -------------------------------
