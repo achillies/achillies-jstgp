@@ -3,9 +3,74 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/gamestyle.css' />
+    <script>
+    function upperCase()
+    {
+    var x=document.getElementById("fname");
+    x.value=x.value.toUpperCase();
+    }
+
+    function cellekt()
+    {
+    var x=document.getElementById('myTable').rows[0].cells;
+    alert(x[0].innerHTML);
+    }
+
+    function mouseDown()
+        {
+        document.getElementById("p1").style.color="red";
+        }
+
+        function mouseUp()
+        {
+        document.getElementById("p1").style.color="blue";
+        }
+
+    function mouseDown1(val)
+    {
+    var countCell = document.getElementById("nerdtable").getElementsByTagName("TD").length;
+    while (countCell>0)
+    {
+    document.getElementById('c'+countCell).style.color="blue";
+    countCell --;
+    }
+    document.getElementById(val).style.color="red";
+    }
+
+    function mouseUp1(val)
+    {
+    var countCell = document.getElementById("nerdtable").getElementsByTagName("TD").length;
+        while (countCell>0)
+        {
+        document.getElementById('c'+countCell).style.color="black";
+        countCell --;
+        }
+        document.getElementById(val).style.color="green";
+    }
+
+    </script>
+
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>This is the best <%= title %></p>
+    <h2>This is the best <%= title %></h2>
+
+    Enter your name: <input type="text" id="fname" onblur="upperCase()" />
+
+    <p id="p1" onmousedown="mouseDown()" onmouseup="mouseUp()">A function is triggered when you leave the input field. The function transforms the input text to upper case. Also, try clicking this text!</p>
+
+<table id="nerdtable" border="1">
+<tr>
+<td id="c1" onmousedown="mouseDown1('c1')" onmouseup="mouseUp1('c1')">cell 1</td>
+<td id="c2" onmousedown="mouseDown1('c2')" onmouseup="mouseUp1('c2')">cell 2</td>
+</tr>
+<tr>
+<td id="c3" onmousedown="mouseDown1('c3')" onmouseup="mouseUp1('c3')">cell 3</td>
+<td id="c4" onmousedown="mouseDown1('c4')" onmouseup="mouseUp1('c4')">cell 4</td>
+</tr>
+</table>
+<br />
+<input type="button" onclick="cellekt()" value="Alert biggest Nerd">
+
   </body>
 </html>

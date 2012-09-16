@@ -6,10 +6,13 @@ h1 {
     color: #000000;
     text-decoration:underline;
 }
+h2 {
+    color: #0000aa;
+    text-decoration:blink;
+}
 
 p {
     color: #0000aa;
-    text-decoration:blink;
 }
 
 a {
