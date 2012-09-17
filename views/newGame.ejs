@@ -41,8 +41,10 @@
         countCell --;
         }
         document.getElementById(val).style.color="green";
-        var y=document.getElementById(val);
-            alert(y.innerHTML + " is the biggest nerd");
+        var y=document.getElementById(val).innerHTML;
+            alert(y + " is the biggest nerd");
+        var x=document.getElementById("fname");
+            x.value=y;
     }
 
     </script>
