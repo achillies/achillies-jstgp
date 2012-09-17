@@ -10,12 +10,6 @@
     x.value=x.value.toUpperCase();
     }
 
-    function cellekt()
-    {
-    var x=document.getElementById('myTable').rows[0].cells;
-    alert(x[0].innerHTML);
-    }
-
     function mouseDown()
         {
         document.getElementById("p1").style.color="red";
@@ -35,6 +29,7 @@
     countCell --;
     }
     document.getElementById(val).style.color="red";
+
     }
 
     function mouseUp1(val)
@@ -46,6 +41,8 @@
         countCell --;
         }
         document.getElementById(val).style.color="green";
+        var y=document.getElementById(val);
+            alert(y.innerHTML + " is the biggest nerd");
     }
 
     </script>
@@ -61,16 +58,15 @@
 
 <table id="nerdtable" border="1">
 <tr>
-<td id="c1" onmousedown="mouseDown1('c1')" onmouseup="mouseUp1('c1')">cell 1</td>
-<td id="c2" onmousedown="mouseDown1('c2')" onmouseup="mouseUp1('c2')">cell 2</td>
+<td id="c1" onmousedown="mouseDown1('c1')" onmouseup="mouseUp1('c1')">Ross Bell</td>
+<td id="c2" onmousedown="mouseDown1('c2')" onmouseup="mouseUp1('c2')">Federico Caimi</td>
 </tr>
 <tr>
-<td id="c3" onmousedown="mouseDown1('c3')" onmouseup="mouseUp1('c3')">cell 3</td>
-<td id="c4" onmousedown="mouseDown1('c4')" onmouseup="mouseUp1('c4')">cell 4</td>
+<td id="c3" onmousedown="mouseDown1('c3')" onmouseup="mouseUp1('c3')">Shubham Bansal</td>
+<td id="c4" onmousedown="mouseDown1('c4')" onmouseup="mouseUp1('c4')">Steve Starkey</td>
 </tr>
 </table>
 <br />
-<input type="button" onclick="cellekt()" value="Alert biggest Nerd">
 
   </body>
 </html>
